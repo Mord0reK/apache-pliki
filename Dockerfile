@@ -1,12 +1,11 @@
 FROM node:18-alpine AS build
 WORKDIR /app
-ENV NODE_OPTIONS=--openssl-legacy-provider
 
 COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build
+RUN NODE_OPTIONS=--openssl-legacy-provider npm run build
 
 FROM php:8.2-apache
 ENV APACHE_DOCUMENT_ROOT=/var/www/h5ai/public
