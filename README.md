@@ -28,6 +28,35 @@ configurations).
 > npm run build
 ~~~
 
+## Docker
+
+Build the image:
+
+~~~sh
+docker build -t apache-pliki .
+~~~
+
+Run the container:
+
+~~~sh
+docker run -it --rm \
+  -p 80:80 \
+  -v /shared/dir:/h5ai \
+  -v /config/dir:/config \
+  -e PUID=$UID \
+  -e PGID=$GID \
+  -e TZ=UTC \
+  apache-pliki
+~~~
+
+Optional basic auth:
+
+~~~sh
+-e HTPASSWD=true \
+-e HTPASSWD_USER=awesometic \
+-e HTPASSWD_PW=awesometic
+~~~
+
 
 ## License
 
