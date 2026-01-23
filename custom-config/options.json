@@ -1,0 +1,55 @@
+{
+    "view": {
+        "binaryPrefix": false,
+        "disableSidebar": false,
+        "fallbackMode": false,
+        "fastBrowsing": true,
+        "fonts": ["Ubuntu", "Roboto", "Helvetica", "Arial", "sans-serif"],
+        "fontsMono": ["Ubuntu Mono", "Monaco", "Lucida Sans Typewriter", "monospace"],
+        "hidden": ["^\\.", "^_h5ai"],
+        "hideFolders": false,
+        "hideIf403": true,
+        "hideParentFolder": false,
+        "maxIconSize": 40,
+        "modes": ["details", "grid", "icons"],
+        "modeToggle": false,
+        "setParentFolderLabels": true,
+        "sizes": [20, 40, 60, 80, 100, 140, 180, 220, 260, 300],
+        "theme": "comity",
+        "unmanaged": ["index.html", "index.htm", "index.php"],
+        "unmanagedInNewWindow": false
+    },
+    "thumbnails": {
+        "enabled": true,
+        "img": ["img-bmp", "img-gif", "img-ico", "img-jpg", "img-png"],
+        "mov": ["vid-avi", "vid-flv", "vid-mkv", "vid-mov", "vid-mp4", "vid-mpg", "vid-webm"],
+        "doc": ["x-pdf", "x-ps"],
+        "delay": 1,
+        "size": 240,
+        "exif": false,
+        "chunksize": 20
+    },
+    "download": {
+        "enabled": true,
+        "type": "php-tar",
+        "packageName": null,
+        "alwaysVisible": false
+    },
+    "select": {
+        "enabled": true,
+        "clickndrag": true,
+        "checkboxes": true
+    },
+    "info": {
+        "enabled": true,
+        "show": false,
+        "qrcode": true,
+        "qrFill": "#999",
+        "qrBack": "#fff"
+    },
+    "l10n": {
+        "enabled": true,
+        "lang": "pl",
+        "useBrowserLang": true
+    }
+}

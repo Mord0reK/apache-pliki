@@ -1,0 +1,26 @@
+services:
+  h5ai:
+    build: .
+    container_name: h5ai-apache
+    ports:
+      - "8080:80"
+    volumes:
+      # Mount user files directory to subdirectory for testing
+      - ./data:/var/www/html/files
+      # Optional: Mount custom h5ai configuration
+      - ./custom-config:/var/www/html/_h5ai/private/conf:ro
+      # Optional: Mount cache directories for persistence
+      - ./cache/public:/var/www/html/_h5ai/public/cache
+      - ./cache/private:/var/www/html/_h5ai/private/cache
+    environment:
+      - APACHE_RUN_USER=apache
+      - APACHE_RUN_GROUP=apache
+      - PHP_MEMORY_LIMIT=256M
+      - PHP_UPLOAD_MAX_FILESIZE=100M
+      - PHP_POST_MAX_SIZE=100M
+    restart: unless-stopped
+
+
+volumes:
+  h5ai_cache_private:
+    driver: local
